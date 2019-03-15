@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Lato");
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+@import url("https://fonts.googleapis.com/css?family=Playfair+Display");
+/* f6f7fb */
+* {
+  box-sizing: border-box;
+}
+body {
+  padding: 0;
+  margin: 0;
+  color: #2b2928;
+  font: 100%/1.75 Merriweather, serif;
+  -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.section {
+  height: 560px;
+}
+.header {
+  /* color: #ffff; */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 998;
+  position: fixed;
+  width: 100%;
+  height: 50px;
+  padding: 0px 10px;
+  font-family: "Lato", sans-serif;
+}
+.header ul {
+  font-family: "Lato", sans-serif;
+  list-style-type: none;
+  padding: 5px 0;
+  font-size: 12px;
+  color: #ffff;
+  line-height: 1;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  padding-right: 4px;
+}
+.icon {
+  align-self: center;
+  padding: 0 10px 0 0;
+}
+.logo-li {
+  padding-right: 14px !important;
+}
+.left-nav {
+  display: flex;
+  justify-self: flex-start;
+  align-items: center;
+}
+.left-nav li {
+  padding-right: 25px;
+}
+.pipe {
+  background: #807f7e;
+  width: 1px;
+  align-self: stretch;
+  height: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+.right-nav {
+  display: flex;
+  justify-self: flex-end;
+  align-items: center;
+}
+.right-nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  min-width: 105px;
+}
+.login-li {
+  padding: auto 10px;
+}
+.get-started-btn {
+  font-size: 12px;
+  border: none;
+  padding: 9px 9px;
+  border-radius: 3px;
+  background-color: #0f9b8f;
+  color: #ffff;
+}
+.hero-image-desktop {
+  object-fit: cover;
+  width: 100%;
+  background-position: 50% 50%;
+  height: 560px;
+  display: flex;
+}
+.hero-image-mobile {
+  display: none;
+}
+.section-content {
+  border: 2px solid #0000;
+  height: 600px;
+}
+.header.active {
+  background: #2b2928;
+}
+.container-on-image {
+  position: relative;
+  top: -368px;
+  padding-left: 134px;
+  padding-right: 134px;
+}
+.container-on-image-text {
+  margin-left: 0;
+  padding-bottom: 46px;
+  padding-right: 60px;
+  font-family: "Playfair Display", serif;
+  font-size: 42px;
+  line-height: 1.15;
+  letter-spacing: normal;
+  text-align: left;
+  width: 400px;
+}
+.container-on-image-btn {
+  font-family: "Lato", sans-serif;
+  font-size: 15px;
+  letter-spacing: 2px;
+  line-height: 15px;
+  border: none;
+  padding: 16px 64px 16px 64px;
+  border-radius: 3px;
+  background-color: #0f9b8f;
+  color: #ffff;
+}
+.small-laptop {
+  display: none;
+}
+
+/* For small laptop screen width: 1024 */
+@media (max-width: 1024px) {
+  .left-nav {
+    display: none;
+  }
+  .small-laptop {
+    display: flex;
+    justify-items: flex-start;
+    align-items: center;
+  }
+  .toggle-btn {
+    padding: 0 22px 0 9px;
+    height: 13px;
+    cursor: pointer;
+  }
+  .container-on-image {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .pipe {
+    margin-right: 10px;
+  }
+  .hero-image-mobile {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  .hero-image-desktop{
+    display: none;
+  }
+  .hero-image-mobile {
+    display: flex;
+    object-fit: cover;
+    width: 100%;
+    background-position: 50% 50%;
+    height: 450px;
+  }
+  /* 500px */
+  .container-on-image {
+    position: relative;
+    top: -140px;
+    left: auto;
+    right: auto;
+    width: 100%;
+    align-self: center;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .container-on-image-text {
+    font-size: 30px;
+    color: #ffff;
+    width: 100%;
+    padding-right: 0px;
+    padding-bottom: 39px;
+    text-align: center;
+  }
+  .container-on-image-btn-div{
+    text-align: center;
+  }
+  .container-on-image-btn {
+    padding: 16px 45px 16px 44px;
+  }
+}
+@media(max-width: 543px){
+  .container-on-image {
+    position: relative;
+    top: -182px;
+  }
+  .container-on-image-text {
+    line-height: 1.3;
+    padding-bottom: 37px;
+  }
+}
+@media(max-width: 479px){
+  .login-li{
+    display: none !important;
+  }
+}
