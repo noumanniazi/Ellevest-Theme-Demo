@@ -14,7 +14,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-.section {
+.section-top {
   height: 560px;
 }
 .header {
@@ -103,10 +103,6 @@ body {
 .hero-image-mobile {
   display: none;
 }
-.section-content {
-  border: 2px solid #0000;
-  height: 600px;
-}
 .header.active {
   background: #2b2928;
 }
@@ -141,7 +137,69 @@ body {
 .small-laptop {
   display: none;
 }
-
+/* Section 2 */
+.section-2,
+.section-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding-bottom: 30px;
+}
+.section-2-left {
+  margin: auto;
+  padding-bottom: 46px;
+  padding-left: 60px;
+  padding-right: 20px;
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  line-height: 1.15;
+  letter-spacing: normal;
+  text-align: left;
+}
+.section-2-left-text {
+  width: 80%;
+}
+.section-2-right {
+  margin: auto;
+  padding: 0 40px 0 0;
+}
+.section-2-right-text {
+  padding-bottom: 1px;
+}
+/* Section 3 */
+.section-3-left {
+  margin: auto;
+  padding-left: 60px;
+  padding-right: 120px;
+}
+.section-3-left-heading {
+  font-family: "Playfair Display", serif;
+  font-size: 38px;
+  line-height: 1.15;
+  letter-spacing: normal;
+  text-align: left;
+}
+.section-3-right {
+  display: flex;
+  flex: 1 1;
+  padding: 0 20px 0 0;
+}
+.section-3-img {
+  max-width: 100%;
+}
+/* Section 5 */
+.section-5 {
+  display: flex;
+  justify-content: space-around;
+}
+.section-5-content {
+  padding: 0px 10px 0 10px;
+  max-width: 250px;
+}
+.section-5-img {
+  height: 200px;
+  width: 250px;
+  margin-bottom: 10px;
+}
 /* For small laptop screen width: 1024 */
 @media (max-width: 1024px) {
   .left-nav {
@@ -167,9 +225,17 @@ body {
   .hero-image-mobile {
     display: none;
   }
+  /* Section 3 */
+  .section-3-img {
+    max-width: 100%;
+    max-height: 450px;
+  }
 }
 @media (max-width: 767px) {
-  .hero-image-desktop{
+  .section-top {
+    height: 450px;
+  }
+  .hero-image-desktop {
     display: none;
   }
   .hero-image-mobile {
@@ -198,14 +264,54 @@ body {
     padding-bottom: 39px;
     text-align: center;
   }
-  .container-on-image-btn-div{
+  .container-on-image-btn-div {
     text-align: center;
   }
   .container-on-image-btn {
     padding: 16px 45px 16px 44px;
   }
+  /* Section 2 */
+  .section-2-left {
+    padding-left: 15px;
+    padding-right: 10px;
+    font-size: 32px;
+  }
+  .section-2-right {
+    margin: auto;
+    padding: 0 10px 0 0;
+  }
+  /* Section 3 */
+  .section-3-left {
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 10px;
+  }
+  .section-3-left-heading {
+    font-family: "Playfair Display", serif;
+    font-size: 38px;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: left;
+  }
+  .section-3-right {
+    display: flex;
+    flex: 1 1;
+    padding: 0 20px 0 0;
+  }
+  .section-3-img {
+    max-width: 100%;
+    max-height: 400px;
+  }
+  /* Section 5 */
+  .section-5-content {
+    max-width: 200px;
+  }
+  .section-5-img {
+    height: 180px;
+    width: 200px;
+  }
 }
-@media(max-width: 543px){
+@media (max-width: 543px) {
   .container-on-image {
     position: relative;
     top: -182px;
@@ -214,9 +320,73 @@ body {
     line-height: 1.3;
     padding-bottom: 37px;
   }
+  /* Section 2 */
+  .section-2,
+  .section-3 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .section-2-left {
+    width: 100%;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 0px;
+    font-size: 28px;
+  }
+  .section-2-left-text {
+    width: 100%;
+  }
+  .section-2-right {
+    text-align: center;
+    margin: auto;
+    padding: 0 0 0 0;
+  }
+  /* Section 3 */
+  .section-3-left-heading {
+    text-align: center;
+  }
+  .section-3-left-paragraph {
+    text-align: center;
+  }
+  .section-3-right {
+    padding: 0 0 0 0;
+  }
+  /* Section 5 */
+  .section-5-content {
+    max-width: 150px;
+  }
+  .section-5-img {
+    height: 120px;
+    width: 150px;
+  }
 }
-@media(max-width: 479px){
-  .login-li{
+@media (max-width: 479px) {
+  .login-li {
     display: none !important;
+  }
+  /* Section 5 */
+  .section-5{
+    flex-direction: column;
+  }
+  .section-5-content {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+  }
+  .section-5-content p{
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+  }
+  .section-5-img {
+    height: 90px;
+    width: 110px;
+    align-self: center;
+  }
+}
+@media (min-width: 2560px) {
+  .section-2-left {
+    margin: 0;
   }
 }
